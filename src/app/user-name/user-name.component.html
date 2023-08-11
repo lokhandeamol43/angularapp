@@ -1,0 +1,13 @@
+<p>user-name works!</p>
+
+<div>
+    <label> Username :  </label>
+    <input type="text" placeholder="Please enter username" [(ngModel)]="username">
+</div>
+
+<p>
+    {{username}}
+</p>
+
+<button [disabled]="username == ''" (click)="resetUsername()">Click Me</button>
+

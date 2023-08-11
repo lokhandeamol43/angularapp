@@ -1,0 +1,29 @@
+h2{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+
+
+.container{
+    height: auto;
+    width: 400px;
+    background-image: url('https://images.pexels.com/photos/172301/pexels-photo-172301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    /* background-color: bisque; */
+    border-radius: 15px;
+}
+
+p{
+    margin: 0px;
+}
+
+.years, .months, .days{
+    
+    padding-bottom: 20px;
+}
+
+input{
+    
+    background-color: rgba(255, 255, 255, 0.2); 
+
+}

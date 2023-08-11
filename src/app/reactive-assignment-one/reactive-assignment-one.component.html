@@ -1,0 +1,158 @@
+<div class="container background-image-container">
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-6 text-left rounded shadow py-5"> -->
+            <form [formGroup]="assignForm" (ngSubmit)="OnSubmit()">
+              
+                <div class="row form1">
+                    <div class="col-md-2 profileimage">
+                        <img src="https://clipart-library.com/images/kTKo7BB8c.png" alt="Profile Image" class="img-fluid rounded-circle">
+                        <div class="text-center mt-2">Amol Lokhande</div>
+                        <!-- <div class="text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sequi laudantium.</div> -->
+                      </div>
+                    <div class="col-md-3 userdetails">
+                        <h4 class="mb-3">User details</h4>
+                        <div class="form-group mt-2">
+                            <label for="fullname">Fullname</label>
+                            <input type="text" class="form-control" formControlName="fullname" placeholder="Please enter full name"  maxlength="50">
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('fullname').valid && assignForm.get('fullname').touched">Please enter your full name*</small>
+                            
+                              
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" class="form-control" min="1950-01-01" max="2005-01-01" formControlName="birthday">
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('birthday').valid && assignForm.get('birthday').touched">Please enter birthdate*</small>
+                            
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" class="form-control" formControlName="gender">
+                              <!-- <option value="">Select Gender</option> -->
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Other">Other</option>
+                            </select>
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('gender').valid && assignForm.get('gender').touched">Please select gender*</small>
+                          </div>
+                        <div class="form-group mt-2">
+                            <label for="phonenumber">Phone</label>
+                            <input type="number" class="form-control" formControlName="phonenumber" pattern="^\d{10}$" placeholder="Please enter valid phone number">
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('phonenumber').valid && assignForm.get('phonenumber').touched">Please enter valid phonenumber*</small>
+                            
+                        </div>
+                        <div class="for-group mt-2">
+                            <label for="bio">Bio</label>
+                            <input type="text" class="form-control" formControlName="bio" placeholder="Please enter your bio">
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('bio').valid && assignForm.get('bio').touched">Tell us about yourserlf*</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 accountdetails">
+                        <h4 class="mb-3">Account Details</h4>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" formControlName="username" placeholder="Please enter username" minlength="5" maxlength="10">
+                            <small class="text-danger mb-2" *ngIf="assignForm.get('username').errors?.required && assignForm.get('username').touched">Please enter Username*</small>
+                            <small class="text-danger mb-2" *ngIf="assignForm.get('username').errors?.minlength && assignForm.get('username').touched">Username should be at least 5 characters*</small>                            
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" formControlName="email" placeholder="Please enter email address" pattern=".*@gmail\.com$" >
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('email').valid && assignForm.get('email').touched">Email should have domain @gmail*</small>
+                            
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" formControlName="password" placeholder="Please enter password">
+                            <small class="text-danger mb-2" *ngIf="!assignForm.get('password').valid && assignForm.get('password').touched">Please enter password*</small>
+                            
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="confirmpassword">Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="confirmpassword" placeholder="Re-enter password">
+                            <small class="text-danger mb-1" *ngIf="!assignForm.get('confirmpassword').valid && assignForm.get('confirmpassword').touched">Re-enter password*</small>
+                            
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check mt-4">
+                            <input type="checkbox" class="form-check-input" id="agree_terms" formControlName="agree_terms">
+                            <label for="agree_terms mb-1">I agree to the terms and conditions</label>
+                            <small class="text-danger" *ngIf="!assignForm.get('agree_terms').valid && assignForm.get('agree_terms').untouched">Please accept the terms and conditions</small>
+                          </div>
+                        </div>
+                        <div class="clickbtn">
+                            <!-- <button type="submit" class="btn btn-success mt-2">Submit</button> -->
+                            <button type="submit" [disabled]="!assignForm.valid" class="btn btn-success mt-3">Submit</button>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                    
+<div class="user-input-values" *ngIf="isFormSubmitted">
+    <h4>User Input Values:</h4>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Fullname:</td>
+          <td>{{ userInputValues.fullname }}</td>
+        </tr>
+        <tr>
+          <td>Birthday:</td>
+          <td>{{ userInputValues.birthday }}</td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>{{ userInputValues.gender }}</td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td>
+          <td>{{ userInputValues.phonenumber }}</td>
+        </tr>
+        <tr>
+          <td>Bio:</td>
+          <td>{{ userInputValues.bio }}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="user-input-values" *ngIf="isFormSubmitted">
+        <h4>Account Details</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+              <td>Username:</td>
+              <td>{{ userInputValues.username }}</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>{{ userInputValues.email }}</td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>{{ userInputValues.password }}</td>
+            </tr>
+            <tr>
+              <td>Confirm password:</td>
+              <td>{{ userInputValues.confirmpassword }}</td>
+            </tr>
+            <tr>
+              <td>Agree to Terms:</td>
+              <td>{{ userInputValues.agree_terms ? 'Yes' : 'No' }}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    
+  
+                    
+                    
+            </form>
+        <!-- </div> -->
+    </div>
+        
+</div>
+    
+            

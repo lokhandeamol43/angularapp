@@ -1,0 +1,55 @@
+<div class="container background-image-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <div class="row justify-content-center display-4">Registration Form</div>
+            <form (ngSubmit)="OnSubmit(regForm)" #regForm="ngForm">
+            
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username1" #username1="ngModel" ngModel placeholder="Enter username" required>
+                    <small *ngIf="username1.touched && !username1.valid" class="text-danger">Enter valid username</small><br>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" #email="ngModel" name="email" ngModel placeholder="Enter your email" email required>
+                    <small class="text-danger" *ngIf="email.touched && !email.valid">Enter valid email address</small><br>
+                </div>
+                <div class="form-group">
+                    <label for="password"> Password </label>
+                    <input type="password" class="form-control" id="password" #password="ngModel" name="password" ngModel placeholder="Enter your password" required>
+                    <small class="text-danger" *ngIf="password.touched && !password.valid">Please enter password</small><br>
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course"  class="form-control" name="course" #course="ngModel" ngModel required>
+                        <option value="">Select Course</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Business">Business</option>>
+                    </select>
+                    <small class="text-danger" *ngIf="course.touched && !course.valid">Please select Course</small><br>
+                </div>
+
+            <div ngModelGroup="addressCountry">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input placeholder="Enter Country" class="form-control" id="Country" type="text" ngModel name="country" #country="ngModel" required>
+                </div>
+                <small class="text-danger" *ngIf="country.touched && !country.valid">Please enter your country</small><br>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" ngModel name="state" #state="ngModel" placeholder="Enter your state" required>
+                </div>
+                <small class="text-danger" *ngIf="state.touched && !state.valid">Please enter your state</small><br>
+            </div>
+            <br>
+            <div class="row justify-content-center mx-1">
+                <button type="submit" [disabled]="!regForm.valid" class="btn btn-success mt-2">Submit</button>
+            </div>
+            
+             </form>
+
+        </div>
+    </div>
+</div>

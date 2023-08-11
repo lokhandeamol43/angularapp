@@ -1,0 +1,78 @@
+<div class="container mt-5 col-md-6">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-left rounded shadow py-5">
+        <h4>Registration Form</h4><br>
+        <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+          <div formGroupName="userDetails" class="form-group">
+            <label for="username">UserName</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Please enter name">
+            <small class="text-danger" *ngIf="myForm.get('userDetails.username').invalid && myForm.get('userDetails.username').touched">User name required *</small>
+          </div><br>
+          <div formGroupName="userDetails" class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" placeholder="Please enter email address">
+            <small class="text-danger" *ngIf="myForm.get('userDetails.email').invalid && myForm.get('userDetails.email').touched">Please enter a valid email*</small>
+          </div><br>
+  
+          <div class="form-group">
+            <label for="course">Course</label>
+            <select formControlName="course" class="form-control" id="course">
+              <option value="Angular">Angular</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="TypeScript">TypeScript</option>
+            </select><br>
+          </div>
+  
+          <div class="form-group ">
+            <label>Gender:</label>
+            <div *ngFor="let gender of genders" class="form-check form-check-inline">
+              <input class="custom-control-input" type="radio" formControlName="gender" value="{{gender.value}}" id="{{gender.id}}">
+              <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+            </div>
+          </div><br>
+  
+          <!-- <div class="form-group col-md-6" formArrayName="skills">
+            <label>Skills</label>
+            <ng-container *ngFor="let skill of myForm.get('skills').controls; index as i">
+              <input type="text" class="form-control mb-2" formControlName="{{i}}" placeholder="Add skills">
+              <div class="input-group-append">
+                <button class="btn btn-danger btn-sm " (click)="OnRemoveSkills(i)">Remove Skill</button>
+              </div>
+            </ng-container>
+            <button class="btn btn-info btn-sm mt-2" (click)="OnAddSkills()">Add Skill</button>
+            <button class="btn btn-danger btn-sm mt-2 removebtn" (click)="OnRemoveLastSkill()">Remove Skill</button>   
+          </div> -->
+
+          <div class="form-group col-md-auto" formArrayName="skills">
+            <label> Skills</label>
+            <ng-container *ngFor="let skill of myForm.get('skills').controls; let i = index">
+              <div class="input-group mb-2">
+                <input type="text" class="form-control" formControlName="{{i}}" placeholder="Add skills">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-danger btn-sm removebtn" (click)="OnRemoveSkills(i)"><strong>X</strong></button>
+                </div>
+              </div>
+            </ng-container>
+            <button type="button" class="btn btn-info btn-sm mt-2" (click)="OnAddSkills()">Add Skill</button>
+          </div>
+  
+          
+    
+          <button type="submit" class="btn btn-success mt-3 col-md-12">Submit</button>
+
+          <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+            <h2 class="text-center">Form Data</h2>
+            <p>UserName: <strong>{{myForm.get('userDetails.username').value}}</strong></p>
+            <p>Email: <strong>{{myForm.get('userDetails.email').value}}</strong></p>
+            <p>Course: <strong>{{myForm.get('course').value}}</strong></p>                  
+            <p>Gender: <strong>{{myForm.get('gender').value}}</strong></p>
+            <p>Skill: <strong>{{myForm.get('skills').value}}</strong></p>              
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,68 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+  box-shadow: 0 0 13px #ff000021;
+}
+
+.text-danger {
+  margin-top: 5px;
+}
+
+/* .btn-add {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.397);
+} */
+
+.btn-add i {
+  font-size: 14px;
+  line-height: 15px;
+  margin-right: 4px;
+}
+
+/* .btn-add:hover {
+  border: 1px solid #020f1c;
+  background: #242222;
+  
+} */
+
+.fa-plus, .fa-minus {
+  font-size: 14px;
+  line-height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-right: 4px;
+}
+
+
+.removebtn{
+    margin-left: 10px;
+    height: 38px;
+    width: 40px;
+}
+h4{
+    text-align: center;
+}
+
+.py-5{
+    background-image: url('https://images.pexels.com/photos/1148399/pexels-photo-1148399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+input, select {
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+
+  h4{
+    background-color:rgba(251, 199, 55, 0.7); 
+    border-radius: 10px;
+    /* width: fit-content; */
+    /* text-align: center; */
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  

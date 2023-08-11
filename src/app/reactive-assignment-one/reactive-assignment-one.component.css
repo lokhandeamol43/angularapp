@@ -1,0 +1,49 @@
+.background-image-container {
+  background: url('https://static.vecteezy.com/system/resources/previews/010/058/149/original/back-to-school-background-with-silhouette-of-books-feathers-school-tool-doodle-and-copy-space-area-suitable-to-place-on-content-with-that-theme-free-vector.jpg') no-repeat center/cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* @media only screen and (max-width:600px){} */
+
+.form1 {
+  margin: 170px 0 0 200px;
+}
+
+.userdetails {
+  margin: 0 25px;
+  width: 30%; /* Increase the width to 60% */
+}
+
+.accountdetails {
+  margin: 0 25px;
+  width: 30%; /* Increase the width to 60% */
+}
+input, select {
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+  box-shadow: 0 0 13px #ff000021;
+}
+
+/* .clickbtn{
+  margin-left: 800px;
+} */
+
+/* Add this CSS to hide default borders of input and select fields */
+input.form-control,
+select.form-control {
+  border: none; /* Remove default borders */
+  border-bottom: 1px solid #000; /* Set bottom border to a solid line */
+  outline: none; /* Remove outline on focus */
+  
+}
+
+table, td{
+  border: 1px solid;
+  width: 400px;
+}

@@ -1,0 +1,14 @@
+<div class="container">
+    <label for="country" required placeholder="Select Country">Select Country&nbsp;</label>
+    <select id="country" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+      <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
+    </select>
+  </div>
+  
+  <div class="container" *ngIf="statesOfSelectedCountry.length > 0">
+    <label for="state">Select State:</label>
+    <select id="state" [(ngModel)]="selectedState">
+      <option *ngFor="let state of statesOfSelectedCountry" [value]="state">{{ state }}</option>
+    </select>
+  </div>
+  
