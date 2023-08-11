@@ -28,6 +28,7 @@ import { CalculateAge1Component } from './calculate-age1/calculate-age1.componen
 import { CalculateAge2Component } from './calculate-age2/calculate-age2.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GitComponent } from './git/git.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     Comp2Component,
     CalculateAge1Component,
     CalculateAge2Component,
-    UserComponent
+    UserComponent,
+    GitComponent
 
   ],
   imports: [
