@@ -1,0 +1,44 @@
+<div class="bgi col-md-12">
+
+    <div class="container col-md-4">
+        <h3 class="text-center py-3">Project Details</h3>
+        <form [formGroup]="vlidationForm" (ngSubmit)="OnSubmit()">
+            <div formGroupName="projectDetails" class="form-group">
+                <label for="projectname">Project Name</label>
+                <input type="text" class="form-control" formControlName="projectname" placeholder="Please enter project name">
+                <small class="text-danger" *ngIf="!vlidationForm.get('projectDetails.projectname').valid && vlidationForm.get('projectDetails.projectname').touched">
+                    <span class="text-danger" *ngIf="vlidationForm.get('projectDetails.projectname').errors['required']">Please enter valid project name*</span>
+                    <span class="text-danger" *ngIf="vlidationForm.get('projectDetails.projectname').errors['namesIsNotAllowed']">This project name is already in use. Try another.*</span>
+                    <!-- <span class="text-danger" *ngIf="vlidationForm.get('projectDetails.projectname').errors['minLength']">Project name should have a minimum length of 3 characters*</span> -->
+                    
+                    
+                </small>
+            </div><br>
+        
+            <div formGroupName="projectDetails" class="form-group">
+                <label for="mail">Email</label>
+                <input type="text" class="form-control" formControlName="mail" placeholder="Please enter mail address">
+                <small class="text-danger" *ngIf="vlidationForm.get('projectDetails.mail').invalid && vlidationForm.get('projectDetails.mail').touched">
+                  <span *ngIf="vlidationForm.get('projectDetails.mail').errors['required']">Please enter your valid email. </span>
+                  <span *ngIf="vlidationForm.get('projectDetails.mail').errors['emailNotAllowed']">This email is already exists. Use another email.</span>
+                  <span *ngIf="vlidationForm.get('projectDetails.mail').errors['emailDomainNotAllowed']">Email should end with @gmail.com. </span>
+                </small>
+              </div><br>
+        
+              <div class="form-group">
+                <label>Project Status</label>
+                <select formControlName="projectStatus" class="form-control" id="projectStatus">
+                    <option value="">Select Project Status</option>
+                    <option value="Stable">Stable</option>
+                    <option value="Critical">Critical</option>
+                    <option value="Finished">Finished</option>
+                  </select>
+            </div><br>
+        
+            <button type="submit" class="btn btn-success mt-3 col-md-12">Submit</button>
+        
+        </form>
+        
+    </div>
+
+</div>
