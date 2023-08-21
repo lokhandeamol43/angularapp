@@ -30,6 +30,7 @@ import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GitComponent } from './git/git.component';
 import { ValidationAssign2ReactiveFormComponent } from './validation-assign2-reactive-form/validation-assign2-reactive-form.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ValidationAssign2ReactiveFormComponent } from './validation-assign2-rea
     CalculateAge2Component,
     UserComponent,
     GitComponent,
-    ValidationAssign2ReactiveFormComponent
+    ValidationAssign2ReactiveFormComponent,
+    PipedemoComponent
 
   ],
   imports: [
