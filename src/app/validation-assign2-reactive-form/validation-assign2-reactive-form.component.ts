@@ -84,12 +84,6 @@ export class ValidationAssign2ReactiveFormComponent implements OnInit {
 
 
 
-
-
-
-
-
-
   EmailNotAllowed(control: FormControl) : Promise<any> | Observable<any> {
     const myPromise = new Promise<any>((resolve, reject) => {
       setTimeout( () => {
