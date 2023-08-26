@@ -31,6 +31,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { GitComponent } from './git/git.component';
 import { ValidationAssign2ReactiveFormComponent } from './validation-assign2-reactive-form/validation-assign2-reactive-form.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { FilterPipe } from './filter.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+
+import { UserFilterCompAssignComponent } from './user-filter-comp-assign/user-filter-comp-assign.component';
+import { UserFilterPipeAssignPipe } from './user-filter-pipe-assign.pipe';
 
 
 @NgModule({
@@ -61,7 +67,13 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
     UserComponent,
     GitComponent,
     ValidationAssign2ReactiveFormComponent,
-    PipedemoComponent
+    PipedemoComponent,
+    CountPipe,
+    FilterPipe,
+    FilterpipeComponent,
+    
+    UserFilterCompAssignComponent,
+    UserFilterPipeAssignPipe
 
   ],
   imports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-pipedemo',
@@ -11,6 +12,8 @@ export class PipedemoComponent implements OnInit {
 
   price : number = 5000;
 
+  myObservable;
+
 
   emp = [] = [
     { id: '1', name:'jack'},
@@ -21,6 +24,15 @@ export class PipedemoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    this.myObservable = new Observable((observer) => {
+      console.log('myObservable start')
+      setTimeout(() => {
+        observer.next('Ang B7')
+      }, 1000)
+    })
+  
+
   }
 
 }
