@@ -1,0 +1,61 @@
+<div class="tle">
+    <h3 class="row justify-content-center mb-2"> Search by Name</h3>
+
+    <div class="col-md-8 mb-3 searchbox">
+        <!-- <label for="userId" >Search by Name</label> -->
+        <input type="text" class="form-control" id="userId" placeholder="Enter Name" [(ngModel)]="searchName">
+    </div>
+    
+   
+        <table class="table table-striped rounded" id="usersData">
+    
+            <thead >
+                <tr>
+                      <th class="head">ID</th>
+                      <th class="head">Name</th>
+                      <th class="head">Username</th>
+                      <th class="head">Email</th>
+                      <th class="head">Address</th>
+                      <th class="head">Coordinates</th>
+                      <th class="head">Phone</th>
+                      <th class="head">Website</th>
+                      <th class="head">Company</th>
+                      <th class="head">Catch Phrase</th>
+                      <th class="head">Business Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let user of users | userFilterPipeAssign: searchName" class="user-details">
+                      <td>{{user.id }}</td>
+                      <td>{{ user.name }}</td>
+                      <td>{{ user.username }}</td>
+                      <td>{{ user.email }}</td>
+                      <td>
+                        {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}, {{ user.address.zipcode }}
+                      </td>
+                      <td>
+                        {{user.address.geo.lat}}, {{user.address.geo.lng}}
+                      </td>
+                      <td>{{ user.phone }}</td>
+                      <td>
+                        <a [href]="'http://' + user.website" target="_blank">{{ user.website }}</a>
+                      </td>
+                      <td>
+                        {{ user.company.name }} 
+                      </td>
+                      <td>
+                        {{ user.company.catchPhrase }}
+                      </td>
+                      <td>
+                        {{ user.company.bs }}
+                      </td>
+                 </tr>
+              </tbody>
+          </table>
+   
+  
+  </div>
+
+
+
+  <!-- assignment 22/08/2023 custom filter pipe search by name-->
