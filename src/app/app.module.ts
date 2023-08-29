@@ -41,6 +41,11 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Comp5Component } from './comp5/comp5.component';
 import { Comp6Component } from './comp6/comp6.component';
+import { AssignmentMultiComp1Component } from './assignment-multi-comp1/assignment-multi-comp1.component';
+import { AssignmentMultiComp2Component } from './assignment-multi-comp2/assignment-multi-comp2.component';
+import { AssignmentMultiComp3Component } from './assignment-multi-comp3/assignment-multi-comp3.component';
+import { AssignmentMultiComp4Component } from './assignment-multi-comp4/assignment-multi-comp4.component';
+
 
 
 @NgModule({
@@ -75,14 +80,17 @@ import { Comp6Component } from './comp6/comp6.component';
     CountPipe,
     FilterPipe,
     FilterpipeComponent,
-    
+
     UserFilterCompAssignComponent,
     UserFilterPipeAssignPipe,
     Comp3Component,
     Comp4Component,
     Comp5Component,
-    Comp6Component
-
+    Comp6Component,
+    AssignmentMultiComp1Component,
+    AssignmentMultiComp2Component,
+    AssignmentMultiComp3Component,
+    AssignmentMultiComp4Component,
   ],
   imports: [
     BrowserModule,
