@@ -37,6 +37,10 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 
 import { UserFilterCompAssignComponent } from './user-filter-comp-assign/user-filter-comp-assign.component';
 import { UserFilterPipeAssignPipe } from './user-filter-pipe-assign.pipe';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Comp5Component } from './comp5/comp5.component';
+import { Comp6Component } from './comp6/comp6.component';
 
 
 @NgModule({
@@ -73,7 +77,11 @@ import { UserFilterPipeAssignPipe } from './user-filter-pipe-assign.pipe';
     FilterpipeComponent,
     
     UserFilterCompAssignComponent,
-    UserFilterPipeAssignPipe
+    UserFilterPipeAssignPipe,
+    Comp3Component,
+    Comp4Component,
+    Comp5Component,
+    Comp6Component
 
   ],
   imports: [
