@@ -1,0 +1,12 @@
+<p>comp2</p>
+
+<div class="box px-4" >
+    First Name : <strong>{{firstName}}</strong><br>
+    Last Name : <strong>{{lastName}}</strong>
+    <br>
+   
+    <input class="col-md-4 mt-2" type="text" placeholder="Enter First Name" #fname><br>
+    <input class="col-md-4 mt-2" type="text" placeholder="Enter Last Name" #lname><br>
+    <button class="col-md-4 btn btn-primary mt-2" (click)="updateName(fname.value, lname.value)">Update</button>
+    
+</div>
