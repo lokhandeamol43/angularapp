@@ -45,6 +45,16 @@ import { AssignmentMultiComp1Component } from './assignment-multi-comp1/assignme
 import { AssignmentMultiComp2Component } from './assignment-multi-comp2/assignment-multi-comp2.component';
 import { AssignmentMultiComp3Component } from './assignment-multi-comp3/assignment-multi-comp3.component';
 import { AssignmentMultiComp4Component } from './assignment-multi-comp4/assignment-multi-comp4.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 
 
 
@@ -91,6 +101,16 @@ import { AssignmentMultiComp4Component } from './assignment-multi-comp4/assignme
     AssignmentMultiComp2Component,
     AssignmentMultiComp3Component,
     AssignmentMultiComp4Component,
+    LoginComponent,
+    HomeComponent,
+    AboutusComponent,
+    ContactusComponent,
+    PagenotfoundComponent,
+    ProductComponent,
+    LaptopComponent,
+    TvComponent,
+    TabletComponent,
+    WashingmachineComponent,
   ],
   imports: [
     BrowserModule,
