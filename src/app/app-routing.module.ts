@@ -10,6 +10,10 @@ import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { TvComponent } from './product/tv/tv.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { PostComponent } from './post/post.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { UserComponent } from './user/user.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 const routes: Routes = [
@@ -33,6 +37,12 @@ const routes: Routes = [
     {path: 'tablet', component: TabletComponent},
     {path: 'washingmachine', component: WashingmachineComponent}
   ] },
+  {path: 'post', component: PostComponent},
+  {path: 'postdetails/:id', component: PostdetailsComponent},
+  {path: 'user', component: UserComponent},
+  {path: 'userdetails/:id', component: UserdetailsComponent},
+
+
   {path: '**', component: PagenotfoundComponent}
 
 ];

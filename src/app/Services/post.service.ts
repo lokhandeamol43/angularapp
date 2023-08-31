@@ -5,20 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-
-  url = 'https://jsonplaceholder.typicode.com/users/'; // API End Point
-  // Inject this httpclient
+export class PostService {
+  url = 'https://jsonplaceholder.typicode.com/posts/';
   constructor(private httpClient: HttpClient) { }
 
-  getUsers() {
+ getPosts() : Observable<any>
+ {
    return this.httpClient.get(this.url);
-  }
-
-  getuserById(id: number) : Observable<any>
-  {
-   return this.httpClient.get(this.url+ id);
-  }
-
-
+ }
+ getpostById(id: number) : Observable<any>
+ {
+  return this.httpClient.get(this.url+ id);
+ }
 }

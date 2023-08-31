@@ -55,6 +55,9 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { TvComponent } from './product/tv/tv.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { PostComponent } from './post/post.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -111,6 +114,9 @@ import { WashingmachineComponent } from './product/washingmachine/washingmachine
     TvComponent,
     TabletComponent,
     WashingmachineComponent,
+    PostComponent,
+    PostdetailsComponent,
+    UserdetailsComponent,
   ],
   imports: [
     BrowserModule,
