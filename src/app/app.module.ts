@@ -12,7 +12,6 @@ import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AttributedirComponent } from './attributedir/attributedir.component';
-import { CustdirDirective } from './custdir.directive';
 import { AssignmentNGFORComponent } from './assignment-ngfor/assignment-ngfor.component';
 import { PracticeComponent } from './practice/practice.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
@@ -50,14 +49,12 @@ import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductComponent } from './product/product.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+
 import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductsModule } from './products/products.module';
+import { UtilityModule } from './utility.module';
 
 
 
@@ -72,7 +69,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     NgforComponent,
     NgswitchComponent,
     AttributedirComponent,
-    CustdirDirective,
+
     AssignmentNGFORComponent,
     PracticeComponent,
     SimpleformComponent,
@@ -109,11 +106,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     AboutusComponent,
     ContactusComponent,
     PagenotfoundComponent,
-    ProductComponent,
-    LaptopComponent,
-    TvComponent,
-    TabletComponent,
-    WashingmachineComponent,
+
     PostComponent,
     PostdetailsComponent,
     UserdetailsComponent,
@@ -123,7 +116,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UtilityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
