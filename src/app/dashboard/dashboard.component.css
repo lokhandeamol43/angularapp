@@ -1,0 +1,22 @@
+/* #tasks:hover {
+    transform: scale(1.01);
+} */
+
+.appname{
+    background-color: 	rgb(13,152,186);
+}
+
+.ddd{
+    background-image: url('https://media.istockphoto.com/id/1175377118/photo/brown-color-texture-pattern-abstract-background-can-be-use-as-wall-paper-screen-cover-page-or.jpg?s=612x612&w=0&k=20&c=TgdHjzhepm9Y988SeFHmZVKfdF7ITC0FkeE-ebzLLlQ=');
+}
+
+.round{
+    margin-top: 2px;
+    border-radius: 7px;
+}
+
+#task-value{
+    background-color:  rgba(255, 255, 255, 0.5);
+}
+
+

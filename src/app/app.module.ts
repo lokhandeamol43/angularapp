@@ -57,6 +57,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UtilityModule } from './utility.module';
 import { NavbarRoutingComponent } from './navbar-routing/navbar-routing.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TodoComponent } from './todo/todo.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -117,6 +119,8 @@ import { LogoutComponent } from './logout/logout.component';
     UserdetailsComponent,
     NavbarRoutingComponent,
     LogoutComponent,
+    TodoComponent,
+    DashboardComponent,
 
 
 

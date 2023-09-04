@@ -12,6 +12,8 @@ import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { AuthguardGuard } from './AuthGuard/authguard.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { TodoComponent } from './todo/todo.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -44,8 +46,9 @@ const routes: Routes = [
 
   { path: 'logout',canActivate:[AuthguardGuard], component: LogoutComponent }, // Add this route for the profile component
   // ... other routes
- 
+  // {path: 'todo', component: TodoComponent},
 
+  {path: 'dashboard', component: DashboardComponent},
   {path: '**', component: PagenotfoundComponent}
 
 ];

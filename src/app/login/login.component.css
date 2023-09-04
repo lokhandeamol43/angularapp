@@ -1,7 +1,7 @@
 .container{
     margin-top: 100px;
 height: 300px;
-width: 500px;
-   background-image: url('https://cutewallpaper.org/26/light-background-colors/30-beautiful-color-gradients-for-your-next-design-project.png');
+width: 400px;
+background-color: rgb(244, 241, 239);
     border-radius: 10px;
 }
