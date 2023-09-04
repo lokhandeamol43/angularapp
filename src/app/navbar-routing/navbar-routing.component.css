@@ -1,0 +1,18 @@
+/* Apply hover effect on nav links and brand */
+.nav-link:hover, .navbar-brand:hover {
+    background-color: #f3f8f3; /* Change this color to your desired hover color */
+    color: #070000; /* Change text color as needed */
+    border-radius: 5px; /* Add rounded corners if desired */
+  }
+  
+  /* Style for the active link */
+  .nav-item.active .nav-link {
+    background-color: #f3f8f3; /* Change this color to your desired active color */
+    color: #070000; /* Change text color as needed */
+    border-radius: 5px; /* Add rounded corners if desired */
+  }
+  .move{
+    margin-right: 140px;
+    position: absolute;
+    right: 0;
+  }

@@ -53,8 +53,13 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
-import { ProductsModule } from './products/products.module';
+
 import { UtilityModule } from './utility.module';
+import { NavbarRoutingComponent } from './navbar-routing/navbar-routing.component';
+import { LogoutComponent } from './logout/logout.component';
+
+
+
 
 
 
@@ -110,6 +115,11 @@ import { UtilityModule } from './utility.module';
     PostComponent,
     PostdetailsComponent,
     UserdetailsComponent,
+    NavbarRoutingComponent,
+    LogoutComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
