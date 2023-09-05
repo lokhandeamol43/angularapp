@@ -14,6 +14,8 @@ import { AuthguardGuard } from './AuthGuard/authguard.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { AssignapiComponent } from './assignapi/assignapi.component';
 
 
 
@@ -49,6 +51,8 @@ const routes: Routes = [
   // {path: 'todo', component: TodoComponent},
 
   {path: 'dashboard', component: DashboardComponent},
+  // {path: 'rapidapi', component: RapidapiComponent},
+  {path:'assignapi', component: AssignapiComponent},
   {path: '**', component: PagenotfoundComponent}
 
 ];

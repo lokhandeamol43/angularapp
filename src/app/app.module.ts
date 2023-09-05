@@ -59,6 +59,8 @@ import { NavbarRoutingComponent } from './navbar-routing/navbar-routing.componen
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { AssignapiComponent } from './assignapi/assignapi.component';
 
 
 
@@ -121,6 +123,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LogoutComponent,
     TodoComponent,
     DashboardComponent,
+    RapidapiComponent,
+    AssignapiComponent,
 
 
 
