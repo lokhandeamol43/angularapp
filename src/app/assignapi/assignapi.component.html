@@ -1,0 +1,54 @@
+<div class="tle">
+    <h3 class="row justify-content-center mb-3"> COUNTRY DATA</h3>
+
+    <div class="col-md-8 mb-3 searchbox">
+      <!-- <label for="userId" >Search by Name</label> -->
+      <input type="text" class="form-control" id="countryID" placeholder="Enter Country Name" [(ngModel)]="searchName">
+  </div>
+    
+   
+        <table class="table table-striped rounded" id="usersData">
+    
+            <thead >
+                <tr>
+                      <th class="head">Sr. No.</th>
+                      <th class="head">Name</th>
+                      <th class="head">ISO Code</th>
+                      <th class="head">Coordinates</th>
+                      <th class="head">Timezones</th>
+                      <th class="head">Currency</th>
+                      <th class="head">PhoneCode</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let country of worlds | userFilterPipeAssign: searchName; let i = index" class="user-details">
+                      <td>{{ i + 1 }}</td>
+                      <td>{{country.name}}</td>
+                      <td>{{ country.isoCode }}</td>
+                      <td>{{ country.latitude }}, {{ country.longitude}}</td>
+                      <td>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li *ngFor="let timezone of country.timezones">
+                            {{ timezone.zoneName }} ({{ timezone.gmtOffsetName }})
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        {{ country.currency}}
+                      </td>
+                      <td>
+                        {{country.phonecode}}
+                      </td>
+                      
+                 </tr>
+              </tbody>
+          </table>
+   
+   <div class="mt-1">
+     <strong>Disclaimer: </strong>
+    <p class="disclaimer">
+        This website displays dummy user data fetched from an external API for demonstration purposes only.
+        The information shown here is not real and should not be considered accurate or factual.
+      </p>
+   </div>
+  </div>
