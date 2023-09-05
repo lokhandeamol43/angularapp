@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
   getAllTask() {
     this.crudService.getAllTask().subscribe(res => {
       this.taskArr = res;
+      console.log('todo create', res);
     }, err => {
       alert("Unable to get list of tasks");
     });
@@ -38,6 +39,7 @@ export class DashboardComponent implements OnInit {
     this.crudService.addTask(this.taskObj).subscribe(res => {
       this.ngOnInit();
       this.addTaskValue = '';
+      console.log('todo create', res);
     }, err => {
       alert(err);
     })
@@ -47,6 +49,8 @@ export class DashboardComponent implements OnInit {
     this.taskObj.task_name = this.editTaskValue;
     this.crudService.editTask(this.taskObj).subscribe(res => {
       this.ngOnInit();
+      console.log('todo create', res);
+
     }, err=> {
       alert("Failed to update task");
     })
@@ -56,6 +60,8 @@ export class DashboardComponent implements OnInit {
     if(confirm('Are you sure to delete record?'))           // for delete confirmation msg
     this.crudService.deleteTask(etask).subscribe(res => {
       this.ngOnInit();
+      console.log( res);
+
     }, err=> {
       alert("Failed to delete task");
     });
