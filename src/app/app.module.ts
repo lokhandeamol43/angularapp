@@ -26,7 +26,7 @@ import { Comp2Component } from './comp2/comp2.component';
 import { CalculateAge1Component } from './calculate-age1/calculate-age1.component';
 import { CalculateAge2Component } from './calculate-age2/calculate-age2.component';
 import { UserComponent } from './user/user.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { GitComponent } from './git/git.component';
 import { ValidationAssign2ReactiveFormComponent } from './validation-assign2-reactive-form/validation-assign2-reactive-form.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
@@ -61,7 +61,18 @@ import { TodoComponent } from './todo/todo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
 import { AssignapiComponent } from './assignapi/assignapi.component';
-
+import { HookComponent } from './hook/hook.component';
+import { DynamicloginComponent } from './dynamiclogin/dynamiclogin.component';
+import { AssignrandomuserComponent } from './assignrandomuser/assignrandomuser.component';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { GifListComponent } from './gif-list/gif-list.component';
+import { HeadersInterceptorService } from './headers-interceptor.service';
+import { TaskComponent } from './Task-Manager/task/task.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { CreditcardComponent } from './creditcard/creditcard.component';
 
 
 
@@ -125,9 +136,17 @@ import { AssignapiComponent } from './assignapi/assignapi.component';
     DashboardComponent,
     RapidapiComponent,
     AssignapiComponent,
-
-
-
+    HookComponent,
+    DynamicloginComponent,
+    AssignrandomuserComponent,
+    FirebaseComponent,
+    WikipediaComponent,
+    SearchBoxComponent,
+    PaginationComponent,
+    GifListComponent,
+    TaskComponent,
+    RxjsComponent,
+    CreditcardComponent,
   ],
   imports: [
     BrowserModule,
@@ -137,7 +156,14 @@ import { AssignapiComponent } from './assignapi/assignapi.component';
     HttpClientModule,
     UtilityModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeadersInterceptorService,
+      multi: true
+      }
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

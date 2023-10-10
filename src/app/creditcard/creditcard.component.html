@@ -1,0 +1,36 @@
+<div id="main-container">
+    <div id="card-container">
+        <div id="card">
+            <div id="front">
+                <div class="reflection"></div>
+                <div class="type">PLATINUM</div>
+                <div class="title-text">Bank Name</div>
+                <div class="details">
+                    <div class="name">Person Name</div>
+                    <p id="hidden-number">1111 XXXX XXXX 1452</p>
+                </div>
+                <button id="show-btn" (click)="flip()">View Card Details</button>
+                <div class="logo">MasterCard</div>
+            </div>
+            <div id="back">
+                <div class="reflection"></div>
+                <div id="chip">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="title-text">Bank Name</div>
+                <div class="details">
+                    <div class="name">Person Name</div>
+                    <p id="hidden-number">1111 1223 1223 1452</p>
+                    <span id="cvv">CVV: 304</span>
+                    <span id="valid-date"> Expiry: 02/30</span>
+                </div>
+                <button id="hide-btn" (click)="flip()">Hide Card Details</button>
+                <div class="logo">MasterCard</div>
+            </div>
+        </div>
+    </div>
+</div>

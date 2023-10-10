@@ -1,0 +1,92 @@
+.tle {
+  /* Your existing styles for the container */
+  background-image: url('https://images.pexels.com/photos/7130535/pexels-photo-7130535.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 40px;
+}
+
+.searchbox{
+  width: 600px;
+  margin-left: 430px;
+
+  border-radius: 10px;
+  /* margin-right: 200px; */
+}
+
+
+table,
+th,
+td {
+  text-align: center;
+  height: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: 1px solid rgb(11, 0, 0);
+  border-collapse: collapse;
+  font-size: small;
+  background-color: transparent; /* Set the table background to transparent */
+  color: rgb(3, 3, 3); /* Text color for table cells */
+}
+
+/* Add this rule to make the table headers transparent */
+/* th.head {
+  background-color: transparent;
+} */
+
+/* Add this rule to style the table rows with alternating background color */
+/* tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.1); 
+} */
+
+strong {
+  margin-left: 0px;
+}
+
+p {
+  display: inline;
+}
+
+.head {
+  font-size: medium;
+}
+
+h3 {
+  margin-top: -30px;
+  margin-left: 595px;
+  margin-right: 595px;
+  border-radius: 10px;
+  background-color: rgba(234, 37, 37, 0.9);
+  color: rgb(255, 255, 255);
+}
+
+/* Add this rule to style the table with a border */
+table {
+  border: 1px solid rgb(26, 1, 1);
+}
+
+
+
+
+
+/* Style the table rows with alternating background color */
+tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add this CSS to style the table header (th) */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(227, 123, 123); /* Background color for table header */
+  color: #333; /* Text color for table header */
+}
+.table-container {
+  /* Set a fixed width for the container */
+  max-width: 1300px; /* Adjust this value as needed */
+  max-height: 590px;
+  margin: 0 auto; /* Center the container horizontally */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}

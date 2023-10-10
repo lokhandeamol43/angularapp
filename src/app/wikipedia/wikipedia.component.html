@@ -1,0 +1,42 @@
+<div class="tle">
+    <h3 class="row justify-content-center mb-2 text-white">RANDOM USERS</h3>
+  
+    <div class="input-group mb-2 searchbox">
+        <input  type="text" class="form-control" [(ngModel)]="searchTerm"   placeholder="Enter search term">
+        
+          <button class="btn btn-primary mx-3" (click)="search()">Fetch Data</button>
+    
+      </div>
+  
+    <div class="table-container" *ngIf="showTableHeader">
+      <table class="table rounded" id="usersData">
+        <thead class="sticky-header">
+          <tr>
+            <th class="head">Title</th>
+            <th class="head">Wordcount</th>
+            <th class="head">Snippet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let result of searchResults" class="user-details">
+            
+            <td>
+              {{ result.title }}
+            </td>
+            <td> {{ result.wordcount }}</td>
+            <td>{{ sanitizeAndExtractText(result.snippet) }}</td>
+            
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- <div class="mt-1">
+      <strong>Disclaimer: </strong>
+      <p class="disclaimer text-white">
+        This website displays dummy user data fetched from an external API for demonstration purposes only.
+        The information shown here is not real and should not be considered accurate or factual.
+      </p>
+    </div> -->
+    </div>

@@ -1,0 +1,18 @@
+/* Status color classes */
+.status-not-started {
+  color: red;
+}
+
+.status-in-progress {
+  color: orange;
+}
+
+.status-completed {
+  color: green;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+

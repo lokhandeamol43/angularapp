@@ -15,7 +15,13 @@ import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
-import { AssignapiComponent } from './assignapi/assignapi.component';
+// import { AssignapiComponent } from './assignapi/assignapi.component';
+import { AssignrandomuserComponent } from './assignrandomuser/assignrandomuser.component';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
+import { GifListComponent } from './gif-list/gif-list.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+
 
 
 
@@ -51,8 +57,13 @@ const routes: Routes = [
   // {path: 'todo', component: TodoComponent},
 
   {path: 'dashboard', component: DashboardComponent},
-  // {path: 'rapidapi', component: RapidapiComponent},
-  {path:'assignapi', component: AssignapiComponent},
+  {path: 'rapidapi', component: RapidapiComponent},
+  // {path:'assignapi', component: AssignapiComponent},
+  {path:'firebase', component: FirebaseComponent},
+  {path:'assignrandomuser', component:AssignrandomuserComponent},
+  {path:'wikipedia', component: WikipediaComponent},
+  {path:'gif-list', component:GifListComponent},
+  {path:'rxjs', component: RxjsComponent},
   {path: '**', component: PagenotfoundComponent}
 
 ];

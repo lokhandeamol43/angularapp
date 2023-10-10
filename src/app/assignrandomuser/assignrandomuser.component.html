@@ -1,0 +1,67 @@
+<div class="tle">
+  <h3 class="row justify-content-center mb-2 text-white">RANDOM USERS</h3>
+
+  <div class="input-group mb-2 searchbox">
+    <input type="number" class="form-control" [(ngModel)]="numberOfUsers" placeholder="Enter number of users">
+    
+      <button class="btn btn-primary mx-3" (click)="fetchRandomUsers()">Fetch Users</button>
+    
+  </div>
+
+  <div class="table-container">
+    <table class="table rounded" id="usersData">
+      <thead class="sticky-header">
+        <tr>
+          <th class="head">Sr. No.</th>
+          <th class="head">Picture</th>
+          <th class="head">Name</th>
+          <th class="head">Gender</th>
+          <th class="head">DOB</th>
+          <th class="head">Age</th>
+          <th class="head">Address</th>
+          <th class="head">Phone</th>
+          <th class="head">Email</th>
+          <th class="head">Username</th>
+          <th class="head">Password</th>
+          <th class="head">Registered</th>
+          <!-- <th class="head">Cell</th> -->
+          <!-- <th class="head">ID</th> -->
+          <!-- <th class="head">Nat</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index" class="user-details">
+          <td>{{ i + 1 }}</td>
+          <td>
+            <img src="{{ user.picture.medium }}" alt="User Picture" />
+          </td>
+          <td> {{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.dob.date }}</td>
+          <td>{{ user.dob.age }}</td>
+          <td>
+            {{ user.location.street.number }}, {{ user.location.street.name }}, {{ user.location.city }},
+            {{ user.location.state }}, {{ user.location.country }}
+          </td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.login.username }}</td>
+          <td>{{ user.login.password }}</td>
+          <td>{{ user.registered.date }}</td>
+          <!-- <td>{{ user.cell }}</td> -->
+          <!-- <td>{{ user.id.value }}</td> -->
+          
+          <!-- <td>{{ user.nat }}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <div class="mt-1">
+    <strong>Disclaimer: </strong>
+    <p class="disclaimer text-white">
+      This website displays dummy user data fetched from an external API for demonstration purposes only.
+      The information shown here is not real and should not be considered accurate or factual.
+    </p>
+  </div> -->
+  </div>

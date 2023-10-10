@@ -1,0 +1,21 @@
+<div class="tle">
+  <h3 class="row justify-content-center mb-1 text-white">TRENDING GIF'S</h3>
+  
+  <div class="input-group my-3 searchbox">
+      <input  type="text" class="form-control" [(ngModel)]="searchTerm"   placeholder="Search GIFs">
+      
+        <button class="btn btn-primary mx-3" (click)="search()">Search</button>
+
+  
+    </div>
+
+  <div class="gif-grid">
+    <div class="gif-item" *ngFor="let gif of gifs">
+      <img [src]="gif.images.fixed_height.url" alt="{{ gif.title }}" />
+      <p>{{ gif.title }}</p>
+    </div>
+  </div>
+    
+
+  <app-pagination [currentPage]="currentPage" [totalPages]="totalPages" (pageChange)="loadPage($event)"></app-pagination>
+</div>

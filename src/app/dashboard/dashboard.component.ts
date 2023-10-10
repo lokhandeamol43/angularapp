@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
   }
 
   deleteTask(etask : Task) {
-    if(confirm('Are you sure to delete record?'))           // for delete confirmation msg
+    if(confirm('Are you sure to delete task?'))           // for delete confirmation msg
     this.crudService.deleteTask(etask).subscribe(res => {
       this.ngOnInit();
       console.log( res);

@@ -1,0 +1,26 @@
+/* Pagination container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  .button {
+    background-color: rgba(182, 108, 108, 0.5);
+    color: rgb(13, 12, 12); /* Button text color */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  /* Disabled button styles */
+  .button:disabled {
+    background-color: #ccc; /* Change to your preferred disabled color */
+    cursor: not-allowed;
+  }
+  
